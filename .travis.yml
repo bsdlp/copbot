@@ -1,0 +1,4 @@
+after_success:
+  - /bin/bash ./scripts/send.sh success $DISCORD_BUILD_STATUS_WEBHOOK_URL
+after_failure:
+  - /bin/bash ./scripts/send.sh failure $DISCORD_BUILD_STATUS_WEBHOOK_URL
