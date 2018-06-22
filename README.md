@@ -2,4 +2,4 @@
 
 Helps you cop.
 
-[spec](https://gitlab.com/bsdlp/copbot/wikis/spec)
+[technical spec](https://github.com/bsdlp/copbot/wiki/spec)
