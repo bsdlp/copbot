@@ -2,6 +2,16 @@
 
 
 [[projects]]
+  name = "github.com/aws/aws-lambda-go"
+  packages = [
+    "lambda",
+    "lambda/messages",
+    "lambdacontext"
+  ]
+  revision = "4d30d0ff60440c2d0480a15747c96ee71c3c53d4"
+  version = "v1.2.0"
+
+[[projects]]
   name = "github.com/golang/protobuf"
   packages = [
     "proto",
@@ -13,6 +23,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "32e8e3c44991ff24ae5f206931f1aca4773006c28f9cb19d9aab5f34177ee9c8"
+  inputs-digest = "6442588cddae80a1c5a352916ba9ed96bd8f0b22c6d22602a5b210949e7c065d"
   solver-name = "gps-cdcl"
   solver-version = 1
