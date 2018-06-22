@@ -4,3 +4,6 @@ lint:
 
 test:
 	go test ./...
+
+proto:
+	protoc --proto_path=./commands --go_out=./commands ./commands/*.proto

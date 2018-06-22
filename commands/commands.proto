@@ -1,0 +1,22 @@
+syntax = "proto3";
+package commands;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "commands";
+
+message InboundMessage {
+    google.protobuf.Timestamp Timestamp = 1;
+    string RawMessage = 2;
+    string Command = 3;
+    repeated string Arguments = 4;
+    string DiscordUserID = 5;
+    string DiscordMessageID = 6;
+    string DiscordChannelID = 7;
+}
+
+message OutboundMessage {
+    string DiscordUserID = 1;
+    string DiscordChannelID = 2;
+    string Message = 3;
+}
