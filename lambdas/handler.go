@@ -8,7 +8,7 @@ import (
 )
 
 // HandlerFunc implements lambda.Handler
-type HandlerFunc func(context.Context, commands.InboundMessage) (commands.OutboundMessage, error)
+type HandlerFunc func(context.Context, *commands.InboundMessage) (*commands.OutboundMessage, error)
 
 // Invoke implements lambda.Handler and handles protobuf marshal/unmarshal
 func (hf HandlerFunc) Invoke(ctx context.Context, payload []byte) ([]byte, error) {
