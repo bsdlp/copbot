@@ -3,6 +3,9 @@ after_success:
 after_failure:
   - /bin/bash ./scripts/send.sh failure $DISCORD_BUILD_STATUS_WEBHOOK_URL
 
+notifications:
+  email: false
+
 language: go
 go:
   - "1.10"
