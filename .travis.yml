@@ -12,12 +12,11 @@ services:
 - docker
 jobs:
   include:
-  - stage: lint
-    script: make lint
-  - stage: test
-    script: make test
   - stage: build
-    script: make build
+    script: 
+    - make lint
+    - make test
+    - make build
 deploy:
   skip_cleanup: true
   provider: script
