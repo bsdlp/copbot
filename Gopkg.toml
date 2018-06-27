@@ -32,6 +32,18 @@
   name = "github.com/aws/aws-lambda-go"
   version = "v1.2.0"
 
+[[constraint]]
+  name = "github.com/aws/aws-sdk-go"
+  version = "v1.14.14"
+
+[[constraint]]
+  name = "github.com/kelseyhightower/envconfig"
+  version = "v1.3.0"
+
+[[constraint]]
+  name = "github.com/sirupsen/logrus"
+  version = "v1.0.5"
+
 [prune]
   go-tests = true
   unused-packages = true
