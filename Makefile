@@ -16,7 +16,8 @@ proto:
 	protoc --proto_path=./commands --go_out=./commands ./commands/*.proto
 
 build_lambdas:
-	$(docker_go) go build -o build/remind/remind ./lambdas/remind/main.go
+	$(docker_go) go build -o build/remind-create ./lambdas/remind/create/main.go
+	$(docker_go) go build -o build/remind-list ./lambdas/remind/list/main.go
 
 build: build_lambdas
 
