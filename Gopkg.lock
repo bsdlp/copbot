@@ -35,16 +35,20 @@
     "internal/sdkrand",
     "internal/shareddefaults",
     "private/protocol",
+    "private/protocol/json/jsonutil",
+    "private/protocol/jsonrpc",
     "private/protocol/query",
     "private/protocol/query/queryutil",
     "private/protocol/rest",
     "private/protocol/xml/xmlutil",
-    "service/sns",
-    "service/sns/snsiface",
+    "service/cloudwatchevents",
+    "service/cloudwatchevents/cloudwatcheventsiface",
+    "service/sqs",
+    "service/sqs/sqsiface",
     "service/sts"
   ]
-  revision = "aff39e8473db578a1cec9ac2f829a56813c1d631"
-  version = "v1.14.14"
+  revision = "554c8763b0d746658fe356cf368f5bee064aba09"
+  version = "v1.14.20"
 
 [[projects]]
   name = "github.com/go-ini/ini"
@@ -91,11 +95,11 @@
     "unix",
     "windows"
   ]
-  revision = "c4afb3effaa53fd9a06ca61262dc7ce8df4c081b"
+  revision = "ce36f3865eeb42541ce3f87f32f8462c5687befa"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d3fecbd8e0c21c33f4f422f811a826f3ee70e07811adb4cbb7d20d3e891daeb6"
+  inputs-digest = "92c61316b3fb88113722c33f563b8fee9d1ea4ab78715873e1bfabd4531499aa"
   solver-name = "gps-cdcl"
   solver-version = 1
