@@ -4,6 +4,8 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatchevents"
+	"github.com/aws/aws-sdk-go/service/sqs"
+	"github.com/bsdlp/copbot/internal/outbound"
 	"github.com/bsdlp/copbot/lambdas"
 	"github.com/bsdlp/copbot/lambdas/remind/internal"
 	"github.com/kelseyhightower/envconfig"
@@ -26,6 +28,10 @@ func main() {
 
 	remindHandler := &internal.RemindHandler{
 		CloudWatchEvents: cloudwatchevents.New(session.New(awsConfig)),
+		Outbound: &outbound.Client{
+			SQS:      sqs.New(session.New(awsConfig)),
+			QueueURL: cfg.OutboundQueueURL,
+		},
 	}
 	lambda.StartHandler(lambdas.MessageHandlerFunc(remindHandler.List))
 }
